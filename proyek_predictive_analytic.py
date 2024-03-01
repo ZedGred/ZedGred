@@ -48,9 +48,9 @@ Jumlah dataset=1000"""
 
 obes.info()
 
-"""6.visulisasikan jumlah data non numerik"""
+"""6.Visulisasikan teknik univariete analisis"""
 
-feature = ['Gender','ObesityCategory']
+feature = ['Gender']
 count = obes[feature].value_counts()
 percent = 100*obes[feature].value_counts(normalize=True)
 df = pd.DataFrame({'jumlah sampel':count, 'persentase':percent.round(1)})
@@ -64,10 +64,24 @@ df = pd.DataFrame({'jumlah sampel':count, 'persentase':percent.round(1)})
 print(df)
 count.plot(kind='bar', title=feature[0])
 
-"""7.visulisasi pada data numerik"""
-
 obes.hist(bins=50, figsize=(20,15))
 plt.show()
+
+"""7.visualisai teknik multivariste analisis"""
+
+feature = ['Gender','ObesityCategory']
+count = obes[feature].value_counts()
+percent = 100*obes[feature].value_counts(normalize=True)
+df = pd.DataFrame({'jumlah sampel':count, 'persentase':percent.round(1)})
+print(df)
+count.plot(kind='bar', title=' dan '.join(feature))
+
+sns.pairplot(obes, diag_kind = 'kde')
+
+plt.figure(figsize=(10, 8))
+correlation_matrix = obes.corr().round(2)
+sns.heatmap(data=correlation_matrix, annot=True, cmap='coolwarm', linewidths=0.5, )
+plt.title("Correlation Matrix untuk Fitur Numerik ", size=20)
 
 """8.melakukan one hot encoding untuk data non numerik"""
 
