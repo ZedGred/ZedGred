@@ -185,7 +185,7 @@ Pada Tabel 3.*RandomForest* memiliki akurasi *train* dan *test* paling tinggi di
 
   - Formula metrik akurasi adalah sebagai berikut :
 
-     When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are 
+     When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
   - Metrik akurasi bekerja dengan membandingkan label yang diprediksi oleh model dengan label yang sebenarnya dari data.
