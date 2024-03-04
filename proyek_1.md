@@ -214,7 +214,7 @@ Metrik *F1* merupakan ukuran kinerja klasifikasi yang menggabungkan presisi dan 
 
   - Formula metrik *F1* adalah sebagai berikut :
 
-     $$ F1 = { 2*(P*D) \over(P+D)} $$
+    $$ F1 = \frac{2(PD)}{P+D} $$
 
      Presisi       = proporsi prediksi positif    yang benar-benar positif.
 
