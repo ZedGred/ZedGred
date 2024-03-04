@@ -84,8 +84,8 @@ Pada Tabel 2,berisi informasi tentang *mean*(rata-rata) ,data terkecil hingga te
 - PhysicalActivityLevel : Tingkat aktivitas fisik individu.
 - ObesityCategory       : Tingkatan kategori obesitas(Underweight,Normal weight,Overweight,Obese).
 
-### Visualisasi pada dataset
-- Univariate analisis
+## Visualisasi pada dataset
+### Univariate analisis
 ![visualisasi jumlah data](https://github.com/ZedGred/Proyek_1/blob/main/eda.png?raw=true)
 **Gambar 1.Jumlah dataset numerik**
 
@@ -100,7 +100,7 @@ Pada Tabel 2,berisi informasi tentang *mean*(rata-rata) ,data terkecil hingga te
 **Gambar 3.Jumlah dataset *gender***
 
   Pada Gambar 3,dataset *male* memiliki jumlah data yang besar yang menunjukan bahwa sampel lebih banyak di ambil dari laki-laki. 
-- Multivariete analisis
+### Multivariete analisis
   ![](https://github.com/ZedGred/Proyek_1/blob/main/download%20(4).png?raw=true)
 **Gambar 4.jumlah data hubungan antara *obesitycategory* dengan *gender***
 
@@ -122,7 +122,8 @@ Pada Tabel 2,berisi informasi tentang *mean*(rata-rata) ,data terkecil hingga te
 
 ## Modeling
 Model yang akan digunakan untuk menyelesaikan masalah klasifikasi adalah *RandomForest* , *SVM* , dan *LogisticRegression*.
-- *RandomForest* adalah algoritma ensemble yang membangun banyak pohon keputusan dan menggabungkan prediksinya untuk membuat keputusan akhir. *RandomForest* sangat kuat dan dapat menangani data dengan baik, baik linier maupun *non-linier*. Selain itu,*RandomForest* dapat memberikan informasi penting tentang fitur yang penting untuk klasifikasi.
+### RandomForest 
+*RandomForest* adalah algoritma ensemble yang membangun banyak pohon keputusan dan menggabungkan prediksinya untuk membuat keputusan akhir. *RandomForest* sangat kuat dan dapat menangani data dengan baik, baik linier maupun *non-linier*. Selain itu,*RandomForest* dapat memberikan informasi penting tentang fitur yang penting untuk klasifikasi.
 Parameter algoritma:
  
     - *n_estimators* = 100 (*default*).Jumlah pohon keputusan dalam hutan.
@@ -137,7 +138,9 @@ Parameter algoritma:
   Kelebihan dan kekurangan algoritma : 
    - Kelebihan    : Mampu menangani data yang tidak seimbang.
    - Kekurangan : Membutuhkan waktu komputasi yang lama dan memori yang besar.
-- *SVM* adalah algoritma klasifikasi yang memisahkan data menjadi dua kelas dengan membuat garis atau hiperplan yang memaksimalkan jarak antara kedua kelas. *SVM* sangat efektif untuk menangani data *linier* dan *non-linier*, dan dapat digunakan untuk klasifikasi biner dan multi-kelas.
+
+### SVM
+ *SVM* adalah algoritma klasifikasi yang memisahkan data menjadi dua kelas dengan membuat garis atau hiperplan yang memaksimalkan jarak antara kedua kelas. *SVM* sangat efektif untuk menangani data *linier* dan *non-linier*, dan dapat digunakan untuk klasifikasi biner dan multi-kelas.
 Parameter algoritma:
  
   - C = 1.0 (*default*).Berfungsi untuk mengontrol tingkat regularisasi untuk mencegah *overfitting*.
@@ -150,9 +153,10 @@ Parameter algoritma:
   - Kelebihan    : Efektif untuk jumlah dimensi lebih besar dari sampel.
   - Kekurangan : Kurang efektif untuk kasus klasifikasi data yang kompleks.
 
-- *LogisticRegression* adalah algoritma klasifikasi yang memodelkan probabilitas suatu titik data milik kelas tertentu. *LogisticRegression* sangat efektif untuk data linier dan dapat digunakan untuk klasifikasi biner dan multi-kelas.
+### LogisticRegression
+ *LogisticRegression* adalah algoritma klasifikasi yang memodelkan probabilitas suatu titik data milik kelas tertentu. *LogisticRegression* sangat efektif untuk data linier dan dapat digunakan untuk klasifikasi biner dan multi-kelas.
 Parameter algoritma: 
-    - C = 1.0 (*default*).Mengontrol tingkat regularisasi untuk mencegah *overfitting*.
+   - C = 1.0 (*default*).Mengontrol tingkat regularisasi untuk mencegah *overfitting*.
    - *max_iter* = 100 (*default*).Jumlah maksimum iterasi untuk algoritma optimisasi.
   - *solver* = *lbfgs* (default).Algoritma optimisasi yang digunakan untuk menemukan solusi.
 
@@ -163,33 +167,35 @@ Parameter algoritma:
 
 ## Evaluation
 Metrik yang digunakan adalah metrik akurasi dan *F1* untuk mengevaluasi kasus klasifikasi.
-- Metrik akurasi adalah metrik evaluasi yang mengukur seberapa baik model membuat prediksi yang benar dari total prediksi yang dilakukan. 
+### Metrik Akurasi
+Metrik akurasi adalah metrik evaluasi yang mengukur seberapa baik model membuat prediksi yang benar dari total prediksi yang dilakukan. 
 
 
 
-  Hasil penerapan dari metrik evaluasi adalah sebagai berikut:
-  | Model            |  *Train*	  | *Test*|
+Hasil penerapan dari metrik evaluasi adalah sebagai berikut:
+| Model            |  *Train*	  | *Test*|
   ------------ | :-----------: | ----------:|
-  | *SVM* 	    | 98.75	 | 99.0 |
-  | *RF*	        | 100.0	 | 99.5 |
-  | *Logistic* |	97.875	 | 97.0 |
+| *SVM* 	    | 98.75	 | 99.0 |
+| *RF*	        | 100.0	 | 99.5 |
+| *Logistic* |	97.875	 | 97.0 |
 
-  **Tabel 3.Hasil metrik akurasi**
+**Tabel 3.Hasil metrik akurasi**
 
-  Pada Tabel 3.*RandomForest* memiliki akurasi *train* dan *test* paling tinggi di antara model lainya.Namun tidak cukup untuk menyimpulkan bahwa *RandomForest* adalah model terbaik.Selisih hasil *train* dan *test* model *logistic* adalah 0.125 lebih rendah dari *RandomForest* yang memiliki selisih 0.5 yang membuat model *RandomForest* lebih rentan terhadap *overfitting*.
+Pada Tabel 3.*RandomForest* memiliki akurasi *train* dan *test* paling tinggi di antara model lainya.Namun tidak cukup untuk menyimpulkan bahwa *RandomForest* adalah model terbaik.Selisih hasil *train* dan *test* model *logistic* adalah 0.125 lebih rendah dari *RandomForest* yang memiliki selisih 0.5 yang membuat model *RandomForest* lebih rentan terhadap *overfitting*.
 
   - Formula metrik akurasi adalah sebagai berikut : 
-     ```
+ ```
 Akurasi=TP+TN/FP+FN+TP+TN
 TP = True positive
 TN = True negative 
 FP = False positive
 FN = False negative
-    ```
+```
 
   - Metrik akurasi bekerja dengan membandingkan label yang diprediksi oleh model dengan label yang sebenarnya dari data.
 
-- Metrik *F1* adalah ukuran kinerja klasifikasi yang menggabungkan presisi dan daya ingat. Ini dihitung sebagai rata-rata harmonik tertimbang dari presisi dan daya ingat.
+### Metrik F1
+Metrik *F1* merupakan ukuran kinerja klasifikasi yang menggabungkan presisi dan daya ingat. Ini dihitung sebagai rata-rata harmonik tertimbang dari presisi dan daya ingat.
 
   Hasil penerapan dari metrik evaluasi adalah sebagai berikut:
   
