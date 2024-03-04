@@ -169,10 +169,10 @@ Metrik yang digunakan adalah metrik akurasi dan *F1* untuk mengevaluasi kasus kl
 
   Hasil penerapan dari metrik evaluasi adalah sebagai berikut:
   | Model            |  *Train*	  | *Test*|
------------- | :-----------: | ----------:|
-| *SVM* 	    | 98.75	 | 99.0 |
-| *RF*	        | 100.0	 | 99.5 |
-| *Logistic* |	97.875	 | 97.0 |
+  ------------ | :-----------: | ----------:|
+  | *SVM* 	    | 98.75	 | 99.0 |
+  | *RF*	        | 100.0	 | 99.5 |
+  | *Logistic* |	97.875	 | 97.0 |
 
   **Tabel 3.Hasil metrik akurasi**
 
@@ -194,21 +194,22 @@ FN = False negative
   Hasil penerapan dari metrik evaluasi adalah sebagai berikut:
   
   |index|train\(rata-rata\)|test\(rata-rata\)|
-|---|---|---|
-|SVM|98\.725|99\.175|
-|RF|100|99\.65|
-|Logistic|97\.8|97\.57|
+  |---|---|---|
+  |SVM|98\.725|99\.175|
+  |RF|100|99\.65|
+  |Logistic|97\.8|97\.57|
 
   **Tabel 4.Hasil evaluasi dari rata-rata metrik *F1* pada  data *train* dan *test***
 
   Pada tabel 4.*RandomForest* memiliki *F1* *test* rata-rata tertinggi (99,65%) dan *F1* *train* rata-rata yang sempurna (100%). Hal ini menunjukkan bahwa RF memiliki keseimbangan yang baik antara presisi dan *recall*.rata - rata F1 *test* SVM dan *Logistic* lebih rendah dari *RandomForest*.Hal ini menunjukan bahwa model *RandomForest* tahan terhadap *overfitting*.
 
   - Formula metrik *F1* adalah sebagai berikut :
-    ```
-F1 = 2 * (Presisi * Daya Ingat) / (Presisi + Daya Ingat)
+
+  ```
+  F1 = 2 * (Presisi * Daya Ingat) / (Presisi + Daya Ingat)
 Presisi = proporsi prediksi positif yang benar-benar positif.
 daya ingat = proporsi positif sebenarnya yang diprediksi dengan benar.
-    ```
+  ```
 
   - Metrik F1 mengukur kinerja klasifikasi dengan mempertimbangkan keseimbangan antara presisi dan daya ingat.
 
