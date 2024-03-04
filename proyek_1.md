@@ -226,7 +226,7 @@ D = proporsi positif yang sebenarnya yang diprediksi dengan benar
    - Metrik F1 mengukur kinerja klasifikasi dengan mempertimbangkan keseimbangan antara presisi dan daya ingat.
 
 ### Kesimpulan 
-Berdasarkan metrik akurasi dan *F1*, *RandomForest* adalah model terbaik dari ketiganya.Karena memiliki akurasi dan rata-rata *F1* *test* yang tinggi.Sehingga dapat menggeneralisasi dengan baik ke data baru.
+Berdasarkan metrik akurasi dan *F1*, *RandomForest* adalah model terbaik dari ketiganya.Karena memiliki akurasi dan rata-rata *F1* *test* yang tinggi.Sehingga dapat menggeneralisasi dengan baik ke data baru.Hasil proyek dapat mengidentifikasi obesitas dengan baik karena memiliki skor akurasi dan *F1* yang tinggi yaitu mencapai di atas 90%.Tujuan proyek telah tercapai karena model dapat memprediksi nilai fitur yang menentukan kategori obesitas dengan akurat.
 
 ## Daftar Referensi 
 
