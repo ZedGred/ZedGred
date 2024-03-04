@@ -212,7 +212,7 @@ Metrik *F1* merupakan ukuran kinerja klasifikasi yang menggabungkan presisi dan 
 
   Pada tabel 4.*RandomForest* memiliki *F1* *test* rata-rata tertinggi (99,65%) dan *F1* *train* rata-rata yang sempurna (100%). Hal ini menunjukkan bahwa RF memiliki keseimbangan yang baik antara presisi dan *recall*.rata - rata F1 *test* SVM dan *Logistic* lebih rendah dari *RandomForest*.Hal ini menunjukan bahwa model *RandomForest* tahan terhadap *overfitting*.
 
-     - Formula metrik *F1* adalah sebagai berikut :
+    - Formula metrik *F1* adalah sebagai berikut :
 
      $$ Akurasi = {TP + TN \over FP+FN+TP+TN} $$
 
