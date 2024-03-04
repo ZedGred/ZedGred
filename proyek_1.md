@@ -205,13 +205,12 @@ FN = False negative
 
   - Formula metrik *F1* adalah sebagai berikut :
 
-  ```
-  F1 = 2 * (Presisi * Daya Ingat) / (Presisi + Daya Ingat)
+```
+F1 = 2 * (Presisi * Daya Ingat) / (Presisi + Daya Ingat)
 Presisi = proporsi prediksi positif yang benar-benar positif.
 daya ingat = proporsi positif sebenarnya yang diprediksi dengan benar.
-  ```
-
-  - Metrik F1 mengukur kinerja klasifikasi dengan mempertimbangkan keseimbangan antara presisi dan daya ingat.
+```
+   - Metrik F1 mengukur kinerja klasifikasi dengan mempertimbangkan keseimbangan antara presisi dan daya ingat.
 
 ### Kesimpulan 
 Berdasarkan metrik akurasi dan *F1*, *RandomForest* adalah model terbaik dari ketiganya.Karena memiliki akurasi dan rata-rata *F1* *test* yang tinggi.Sehingga dapat menggeneralisasi dengan baik ke data baru.
