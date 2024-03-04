@@ -216,10 +216,6 @@ Metrik *F1* merupakan ukuran kinerja klasifikasi yang menggabungkan presisi dan 
 
      $$ F1 = {2(P×D) \over (P+D)} $$
 
-     Presisi       = proporsi prediksi positif    yang benar-benar positif.
-
-    Daya ingat = proporsi positif sebenarnya yang diprediksi dengan benar.
-
    - Metrik F1 mengukur kinerja klasifikasi dengan mempertimbangkan keseimbangan antara presisi dan daya ingat.
 
 ### Kesimpulan 
