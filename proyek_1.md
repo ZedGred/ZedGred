@@ -186,6 +186,10 @@ Pada Tabel 3.*RandomForest* memiliki akurasi *train* dan *test* paling tinggi di
   - Formula metrik akurasi adalah sebagai berikut :
 
 $$ Akurasi = {TP + TN \over FP+FN+TP+TN} $$
+      TP = *True Positive*
+      TN = *True Negative*
+      FP = *False Positive*
+      FN = *False Negative*
 
   - Metrik akurasi bekerja dengan membandingkan label yang diprediksi oleh model dengan label yang sebenarnya dari data.
 
@@ -206,11 +210,10 @@ Metrik *F1* merupakan ukuran kinerja klasifikasi yang menggabungkan presisi dan 
 
   - Formula metrik *F1* adalah sebagai berikut :
 
-```
-F1 = 2 * (Presisi * Daya Ingat) / (Presisi + Daya Ingat)
-Presisi = proporsi prediksi positif yang benar-benar positif.
+    $$ F1 = 2 × (Presisi × Daya Ingat) \over (Presisi + Daya Ingat) $$
+Presisi       = proporsi prediksi positif yang benar-benar positif.
 daya ingat = proporsi positif sebenarnya yang diprediksi dengan benar.
-```
+
    - Metrik F1 mengukur kinerja klasifikasi dengan mempertimbangkan keseimbangan antara presisi dan daya ingat.
 
 ### Kesimpulan 
