@@ -27,6 +27,7 @@ import zipfile
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import f1_score
 
 """3.mengextract dataset"""
 
@@ -47,6 +48,10 @@ obes
 Jumlah dataset=1000"""
 
 obes.info()
+
+obes[['Age','Height','Weight']].describe().round(0)
+
+obes[['BMI','PhysicalActivityLevel']].describe().round(0)
 
 """6.Visulisasikan teknik univariete analisis"""
 
@@ -93,14 +98,14 @@ obes.head()
 """9.memisah dataset"""
 
 from sklearn.model_selection import train_test_split
-X=obes[['Age','Height','Weight','BMI','PhysicalActivityLevel','Gender_Female']]
+X=obes[['Age','Height','Weight','BMI','PhysicalActivityLevel','Gender_Female','Gender_Male']]
 y=obes['ObesityCategory']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 123)
 
 """10.menggunakan model random forest"""
 
 from sklearn.ensemble import RandomForestClassifier
-rf = RandomForestClassifier()
+rf = RandomForestClassifier(max_depth=5)
 rf.fit(X_train, y_train)
 
 """11.menggunakan model svm"""
@@ -121,7 +126,6 @@ model_dict = { 'RF': rf,'SVM':svm,'LG':LG}
 
 """14.membuat dataframe acc"""
 
-#membuat datafrane acc
 acc = pd.DataFrame(columns=['train', 'test'], index=['SVM','RF','Logistic'])
 model_dict = {'RF': rf,'SVM' : svm,'Logistic':LG}
 for name, model in model_dict.items():
@@ -129,3 +133,13 @@ for name, model in model_dict.items():
     acc.loc[name, 'test'] = accuracy_score(y_true=y_test, y_pred=model.predict(X_test))*100
 
 acc
+
+"""15.membuat dataframe f1 score"""
+
+f1 = pd.DataFrame(columns=['train(rata-rata)','test(rata-rata)'], index=['SVM','RF','Logistic'])
+model_dict = {'RF': rf,'SVM' : svm,'Logistic':LG}
+for name, model in model_dict.items():
+    f1.loc[name, 'train(rata-rata)'] = sum(f1_score(y_true=y_train, y_pred=model.predict(X_train),average=None).round(3)*100)/4
+    f1.loc[name, 'test(rata-rata)'] = sum(f1_score(y_true=y_test, y_pred=model.predict(X_test),average= None).round(3)*100)/4
+
+f1
