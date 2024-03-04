@@ -183,7 +183,7 @@ Hasil penerapan dari metrik evaluasi adalah sebagai berikut:
 
 Pada Tabel 3.*RandomForest* memiliki akurasi *train* dan *test* paling tinggi di antara model lainya.Namun tidak cukup untuk menyimpulkan bahwa *RandomForest* adalah model terbaik.Selisih hasil *train* dan *test* model *logistic* adalah 0.125 lebih rendah dari *RandomForest* yang memiliki selisih 0.5 yang membuat model *RandomForest* lebih rentan terhadap *overfitting*.
 
-  - Formula metrik akurasi adalah sebagai berikut :
+   - Formula metrik akurasi adalah sebagai berikut :
 
      $$ Akurasi = {TP + TN \over FP+FN+TP+TN} $$
 
