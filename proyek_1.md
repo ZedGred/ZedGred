@@ -214,7 +214,7 @@ Metrik *F1* merupakan ukuran kinerja klasifikasi yang menggabungkan presisi dan 
 
   - Formula metrik *F1* adalah sebagai berikut :
 
-     $$ F1 = {2(P×D) \over (P+D)} $$
+     $$ Akurasi = {TP + TN \over FP+FN+TP+TN} $$
 
    - Metrik F1 mengukur kinerja klasifikasi dengan mempertimbangkan keseimbangan antara presisi dan daya ingat.
 
