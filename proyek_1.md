@@ -185,7 +185,7 @@ Pada Tabel 3.*RandomForest* memiliki akurasi *train* dan *test* paling tinggi di
 
   - Formula metrik akurasi adalah sebagai berikut :
 
-     $$ Akurasi = {TP + TN \over FP+FN+TP+TN} $$
+     $$ Akurasi = {(TP + TN) \over FP+FN+TP+TN} $$
 
       TP = *True Positive*
 
