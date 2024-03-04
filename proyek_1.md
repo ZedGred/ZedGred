@@ -126,7 +126,7 @@ Model yang akan digunakan untuk menyelesaikan masalah klasifikasi adalah *Random
 *RandomForest* adalah algoritma ensemble yang membangun banyak pohon keputusan dan menggabungkan prediksinya untuk membuat keputusan akhir. *RandomForest* sangat kuat dan dapat menangani data dengan baik, baik linier maupun *non-linier*. Selain itu,*RandomForest* dapat memberikan informasi penting tentang fitur yang penting untuk klasifikasi.
 Parameter algoritma:
  
-    - *n_estimators* = 100 (*default*).Jumlah pohon keputusan dalam hutan.
+ - *n_estimators* = 100 (*default*).Jumlah pohon keputusan dalam hutan.
 
   - *min_samples_split* = 2 (*default*).Jumlah minimum sampel yang diperlukan untuk membagi simpul dalam pohon keputusan.
 
