@@ -211,7 +211,7 @@ Metrik *F1* merupakan ukuran kinerja klasifikasi yang menggabungkan presisi dan 
 
   - Formula metrik *F1* adalah sebagai berikut :
 
-    $$ F1 = 2 × (Presisi × Daya Ingat) \over (Presisi + Daya Ingat) $$
+    $$ F1 = {2 × (Presisi × Daya Ingat) \over (Presisi + Daya Ingat)} $$
 
      Presisi       = proporsi prediksi positif    yang benar-benar positif.
     daya ingat = proporsi positif sebenarnya yang diprediksi dengan benar.
