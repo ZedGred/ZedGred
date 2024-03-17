@@ -162,8 +162,10 @@ RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(P_i - O_i)^2}
 $$
 
 
-P_i  = adalah nilai prediksi ke-i,
-O_i  = nilai observasi ke-i,
+P_i  = adalah nilai prediksi ke-i
+
+O_i  = nilai observasi ke-i
+
 n = jumlah total observasi.
 
 *Root Mean Square Error* bekerja dengan mengukur kesalahan prediksi model terhadap nilai sebenarnya.
