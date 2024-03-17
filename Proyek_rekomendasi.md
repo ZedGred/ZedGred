@@ -145,15 +145,22 @@ Metrik yang digunakan adalah metrik *cosine simliarty* untuk *content based filt
 ### Cosine simliarty 
 Cosine similarity adalah metrik yang mengukur kemiripan antara dua vektor non-nol dalam ruang berdimensi-n dengan menghitung kosinus sudut di antara mereka.
 Formula metrik sebagai berikut :
+
+
 $$
 \text{similarity} (\mathbf{A}, \mathbf{B}) = \cos (\theta) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\|\|\mathbf{B}\|}
 $$
+
+
 Cosine similarity bekerja dengan mengukur sudut cosinus antara dua vektor dalam ruang multidimensi.
 ### Root mean squared error
 *Root Mean Square Error* adalah metrik yang digunakan untuk mengukur seberapa baik model prediksi dapat memperkirakan nilai sebenarnya.
+
+
 $$
 RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(P_i - O_i)^2}
 $$
+
 
 P_i  = adalah nilai prediksi ke-i,
 O_i  = nilai observasi ke-i,
