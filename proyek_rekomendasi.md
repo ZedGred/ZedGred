@@ -103,27 +103,27 @@ Metode yang digunakan:
 *TfidfVectorizer* adalah metode yang digunakan untuk mengubah teks menjadi angka yang dapat diproses oleh algoritma pembelajaran mesin. Ini mengukur seberapa penting sebuah kata dalam dokumen dalam kumpulan data.
 Parameter:
 
-- *input: ‘content’ (default)*,Jenis input yang diharapkan; bisa berupa konten string atau *byte*.
-- *encoding: ‘utf-8’(default)*,*Encoding* yang digunakan untuk mendekode *byte* menjadi *string.*
-- *decode_error: ‘strict’(default)*,Instruksi jika terdapat *byte* yang tidak sesuai dengan *encoding* yang diberikan.
-- *strip_accents: None(default)*,Menghapus aksen dan normalisasi karakter lainnya selama tahap *preprocessing.*
-- *lowercase: True(default)*,Mengubah semua karakter menjadi huruf kecil sebelum *tokenisasi*.
-- *preprocessor: None(default)*,Fungsi untuk menggantikan tahap *preprocessing* sambil mempertahankan *tokenisasi* dan pembuatan *n-gram.*
-- *tokenizer: None(default)*,Fungsi untuk menggantikan tahap *tokenisasi.*
-- *analyzer: ‘word’(default)*,Menentukan apakah fitur harus dibuat dari *n-gram* kata atau karakter.
-- *stop_words: None(default)*,Kata-kata yang akan diabaikan selama proses pembuatan fitur.
-- *token_pattern: r"(?u)\\b\\w\\w+\\b"(default)*,Pola *regex* untuk menentukan *token*.
-- *ngram_range: (1, 1)(default)*,Rentang *n-gram* yang akan diekstraksi dari teks.
-- *max_df: 1.0(default)*,Batas maksimum frekuensi dokumen yang akan diabaikan.
-- *min_df: 1(default)*,Batas minimum frekuensi dokumen yang akan diabaikan.
-- *max_features: None(default)*,Jumlah maksimum fitur yang akan diekstraksi.
-- *vocabulary: None(default)*,Kosakata yang telah ditentukan sebelumnya untuk pembuatan fitur.
-- *binary: False(default)*,Jika *True*, semua nilai frekuensi *non-zero* akan diatur menjadi 1.
-- *dtype: numpy.float64(default)*,Tipe data dari matriks hasil.
-- *norm: ‘l2’(default)*,Norma yang digunakan untuk normalisasi *vektor*.
-- *use_idf: True(default)*,Menggunakan *inverse document frequency* untuk menimbang fitur.
-- *smooth_idf: True(default)*,Menambahkan satu ke statistik dokumen untuk menghindari pembagian dengan nol.
-- *sublinear_tf: False(default)*,Menerapkan skala sublinear untuk frekuensi.
+- *input = ‘content’ (default)*,Jenis input yang diharapkan; bisa berupa konten string atau *byte*.
+- *encoding = ‘utf-8’(default)*,*Encoding* yang digunakan untuk mendekode *byte* menjadi *string.*
+- *decode_error = ‘strict’(default)*,Instruksi jika terdapat *byte* yang tidak sesuai dengan *encoding* yang diberikan.
+- *strip_accents = None(default)*,Menghapus aksen dan normalisasi karakter lainnya selama tahap *preprocessing.*
+- *lowercase = True(default)*,Mengubah semua karakter menjadi huruf kecil sebelum *tokenisasi*.
+- *preprocessor = None(default)*,Fungsi untuk menggantikan tahap *preprocessing* sambil mempertahankan *tokenisasi* dan pembuatan *n-gram.*
+- *tokenizer = None(default)*,Fungsi untuk menggantikan tahap *tokenisasi.*
+- *analyzer = ‘word’(default)*,Menentukan apakah fitur harus dibuat dari *n-gram* kata atau karakter.
+- *stop_words = None(default)*,Kata-kata yang akan diabaikan selama proses pembuatan fitur.
+- *token_pattern =  r"(?u)\\b\\w\\w+\\b"(default)*,Pola *regex* untuk menentukan *token*.
+- *ngram_range = (1, 1)(default)*,Rentang *n-gram* yang akan diekstraksi dari teks.
+- *max_df =1.0(default)*,Batas maksimum frekuensi dokumen yang akan diabaikan.
+- *min_df =  1(default)*,Batas minimum frekuensi dokumen yang akan diabaikan.
+- *max_features = None(default)*,Jumlah maksimum fitur yang akan diekstraksi.
+- *vocabulary = None(default)*,Kosakata yang telah ditentukan sebelumnya untuk pembuatan fitur.
+- *binary = False(default)*,Jika *True*, semua nilai frekuensi *non-zero* akan diatur menjadi 1.
+- *dtype = numpy.float64(default)*,Tipe data dari matriks hasil.
+- *norm = ‘l2’(default)*,Norma yang digunakan untuk normalisasi *vektor*.
+- *use_idf = True(default)*,Menggunakan *inverse document frequency* untuk menimbang fitur.
+- *smooth_idf = True(default)*,Menambahkan satu ke statistik dokumen untuk menghindari pembagian dengan nol.
+- *sublinear_tf = False(default)*,Menerapkan skala sublinear untuk frekuensi.
 
 **Cosine simliarty**
 *Cosine similarity* adalah metode pengukuran kesamaan antara dua *vektor* dalam ruang *multidimensi*. Ini digunakan untuk mengukur seberapa mirip atau berbedanya dua dokumen atau teks berdasarkan kata-kata yang terdapat di dalamnya.
@@ -134,6 +134,7 @@ Parameter:
 
 **Fungsi recommender**
 Fungsi *recommender* adalah fungsi untuk mencari index yang diberikan untuk mencari rekomendasi.
+
 Parameter :
 
 - Nama_movie = *Toy story* (1995),Nama *movie*.
@@ -191,6 +192,7 @@ Metode yang digunakan :
 
 **Arsitektur recommenderNet**
 *RecommenderNet* adalah arsitektur jaringan saraf tiruan yang digunakan dalam sistem rekomendasi berbasis *machine learning*.
+
 Parameter :
 
 - num_users=610 ,jumlah pengguna.
@@ -199,11 +201,14 @@ Parameter :
 
 
 **Kelebihan dan Kekurangan**
+
 Kelebihan:
+
 - memberikan rekomendasi yang disesuaikan dengan - preferensi individu pengguna.
 - Menggunakan data dari banyak pengguna untuk memberikan rekomendasi yang lebih akurat.
 
 Kekurangan:
+
 - Sulit memberikan rekomendasi untuk pengguna atau item baru yang belum memiliki data peringkat yang cukup.
 - Dapat menjadi tantangan ketika jumlah pengguna dan item sangat besar.
 ## Evaluation
@@ -212,6 +217,7 @@ Metrik yang digunakan adalah metrik *precision* untuk *content based filtering* 
 *Precision* adalah metrik evaluasi yang mengukur seberapa akurat model dalam memprediksi kelas tertentu.
 
 Hasil metrik :
+
 Dari 5 item yang direkomendasikan,precision sistem memberikan rekomendasi sama sebesar 5/5 persen sehingga *precision* adalah 100 persen.
 
 Formula metrik sebagai berikut:
@@ -228,6 +234,7 @@ Cara kerja metrik *precision* adalah dengan membagi jumlah prediksi positif yang
 *Root Mean Square Error* adalah metrik yang digunakan untuk mengukur seberapa baik model prediksi dapat memperkirakan nilai sebenarnya.
 
 Hasil metrik:
+
 Berdasarkan metrik *RMSE* yaitu 0.2011 dan val *RMSE* yaitu 0.2106 memiliki kesalahan yang kecil karena memiliki data berjumlah ribuan.
 
 |epoch|loss|val loss|
