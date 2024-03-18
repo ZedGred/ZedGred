@@ -187,7 +187,7 @@ Berdasarkan Tabel 6.metrik *RMSE* yaitu 0.2011 dan val *RMSE* yaitu 0.2106 memil
 |4|0.6094|0.6177|
 |5|0.6073|0.6171|
 
-**Tabel 6.hasil loss dan val loss pada metrik *rame.***
+**Tabel 6.hasil loss dan val loss pada metrik *rmse.***
 
 Pada Tabel 6.hasil dari loss dan vall loss semakin menurun yang menandakan model tidak mengalami overfitting dan dapat beradaptasi dengan data baru.
 
