@@ -210,7 +210,8 @@ Kekurangan:
 Metrik yang digunakan adalah metrik *precision* untuk *content based filtering* dan *root mean squared error* untuk *collaborative filtering*.
 ### Precision
 *Precision* adalah metrik evaluasi yang mengukur seberapa akurat model dalam memprediksi kelas tertentu.
-Hasil :
+
+Hasil metrik :
 Dari 5 item yang direkomendasikan,precision sistem memberikan rekomendasi sama sebesar 5/5 persen sehingga *precision* adalah 100 persen.
 
 Formula metrik sebagai berikut:
@@ -225,7 +226,8 @@ FP = Jumlah *False Positive*
 Cara kerja metrik *precision* adalah dengan membagi jumlah prediksi positif yang benar.
 ### Root mean squared error
 *Root Mean Square Error* adalah metrik yang digunakan untuk mengukur seberapa baik model prediksi dapat memperkirakan nilai sebenarnya.
-Hasil :
+
+Hasil metrik:
 Berdasarkan metrik *RMSE* yaitu 0.2011 dan val *RMSE* yaitu 0.2106 memiliki kesalahan yang kecil karena memiliki data berjumlah ribuan.
 
 |epoch|loss|val loss|
