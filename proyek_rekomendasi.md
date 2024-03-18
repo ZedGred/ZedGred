@@ -222,7 +222,7 @@ $$
 TP = Jumlah *True Positive*
 FP = Jumlah *False Positive*
 
-Cara kerja metrik *precision*adalah dengan membagi jumlah prediksi positif yang benar.
+Cara kerja metrik *precision* adalah dengan membagi jumlah prediksi positif yang benar.
 ### Root mean squared error
 *Root Mean Square Error* adalah metrik yang digunakan untuk mengukur seberapa baik model prediksi dapat memperkirakan nilai sebenarnya.
 Hasil :
